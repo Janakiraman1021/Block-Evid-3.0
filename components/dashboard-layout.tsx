@@ -183,7 +183,7 @@ export function DashboardLayout({ children, role }: DashboardLayoutProps) {
       {/* Logo */}
       <div className="flex items-center space-x-3 p-6 border-b border-orange-500/20">
         <FuturisticLogo size="lg" className="neon-glow" />
-        <span className="text-xl font-bold gradient-text">BlockSentinel</span>
+        <span className="text-xl font-bold gradient-text">BlockEvid 3.0</span>
       </div>
 
       {/* Navigation */}
@@ -260,7 +260,7 @@ export function DashboardLayout({ children, role }: DashboardLayoutProps) {
               </SheetContent>
             </Sheet>
             <FuturisticLogo size="md" className="text-orange-500/80" />
-            <span className="text-lg font-bold gradient-text">BlockSentinel</span>
+            <span className="text-lg font-bold gradient-text">BlockEvid 3.0</span>
           </div>
 
           <div className="flex items-center space-x-2">

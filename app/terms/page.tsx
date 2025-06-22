@@ -13,7 +13,7 @@ export default function TermsPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500 floating-animation neon-glow" />
-              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockSentinel</span>
+              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockEvid 3.0</span>
             </Link>
             <Link href="/">
               <Button variant="outline" className="border-orange-500/30 text-[#f5f5f5] hover:bg-orange-500/20">
@@ -31,7 +31,7 @@ export default function TermsPage() {
           <div className="text-center mb-12 sm:mb-16">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-4 sm:mb-6">Terms of Service</h1>
             <p className="text-base sm:text-lg text-[#f5f5f5]/70">
-              Please read these terms carefully before using BlockSentinel services.
+              Please read these terms carefully before using BlockEvid 3.0 services.
             </p>
             <p className="text-sm text-[#f5f5f5]/50 mt-2">Last updated: January 2024</p>
           </div>
@@ -92,13 +92,13 @@ export default function TermsPage() {
               <CardContent className="p-4 sm:p-6 pt-0">
                 <div className="space-y-4 text-sm sm:text-base text-[#f5f5f5]/70">
                   <p>
-                    By accessing and using BlockSentinel ("the Service"), you accept and agree to be bound by the terms
+                    By accessing and using BlockEvid 3.0 ("the Service"), you accept and agree to be bound by the terms
                     and provision of this agreement. If you do not agree to abide by the above, please do not use this
                     service.
                   </p>
                   <p>
                     These Terms of Service ("Terms") govern your use of our complaint management platform, including any
-                    content, functionality, and services offered on or through BlockSentinel.
+                    content, functionality, and services offered on or through BlockEvid 3.0.
                   </p>
                   <p>
                     We reserve the right to update and change the Terms of Service from time to time without notice. Any
@@ -117,7 +117,7 @@ export default function TermsPage() {
               <CardContent className="p-4 sm:p-6 pt-0">
                 <div className="space-y-4 text-sm sm:text-base text-[#f5f5f5]/70">
                   <p>
-                    BlockSentinel is a blockchain-based complaint management system that allows users to file, track,
+                    BlockEvid 3.0 is a blockchain-based complaint management system that allows users to file, track,
                     and manage complaints in a secure, transparent, and immutable manner.
                   </p>
                   <div>
@@ -197,7 +197,7 @@ export default function TermsPage() {
                     <h4 className="font-semibold text-[#f5f5f5] mb-2">Blockchain Costs</h4>
                     <p>
                       Users are responsible for any blockchain transaction fees (gas fees) associated with storing data
-                      on the blockchain. These fees are paid directly to the blockchain network, not to BlockSentinel.
+                      on the blockchain. These fees are paid directly to the blockchain network, not to BlockEvid 3.0.
                     </p>
                   </div>
                   <div>
@@ -244,7 +244,7 @@ export default function TermsPage() {
               <CardContent className="p-4 sm:p-6 pt-0">
                 <div className="space-y-4 text-sm sm:text-base text-[#f5f5f5]/70">
                   <p>
-                    BlockSentinel provides a platform for complaint management but does not guarantee the resolution of
+                    BlockEvid 3.0 provides a platform for complaint management but does not guarantee the resolution of
                     any complaint or the actions taken by authorities.
                   </p>
                   <div>
@@ -256,7 +256,7 @@ export default function TermsPage() {
                     </ul>
                   </div>
                   <p>
-                    In no event shall BlockSentinel be liable for any indirect, incidental, special, consequential, or
+                    In no event shall BlockEvid 3.0 be liable for any indirect, incidental, special, consequential, or
                     punitive damages arising out of your use of the Service.
                   </p>
                 </div>
@@ -298,13 +298,13 @@ export default function TermsPage() {
                   <p>If you have any questions about these Terms of Service, please contact us:</p>
                   <div className="space-y-2">
                     <p>
-                      <strong className="text-[#f5f5f5]">Email:</strong> legal@blocksentinel.com
+                      <strong className="text-[#f5f5f5]">Email:</strong> legal@BlockEvid 3.0.com
                     </p>
                     <p>
                       <strong className="text-[#f5f5f5]">Address:</strong> 123 Blockchain Street, Tech City, TC 12345
                     </p>
                     <p>
-                      <strong className="text-[#f5f5f5]">Support:</strong> support@blocksentinel.com
+                      <strong className="text-[#f5f5f5]">Support:</strong> support@BlockEvid 3.0.com
                     </p>
                   </div>
                 </div>

@@ -130,7 +130,7 @@ export function WalletConnect({ onRoleDetected }: WalletConnectProps) {
           <Wallet className="h-5 w-5 text-orange-500/80" />
           Connect Wallet
         </CardTitle>
-        <CardDescription>Connect your Web3 wallet to access BlockSentinel</CardDescription>
+        <CardDescription>Connect your Web3 wallet to access BlockEvid 3.0</CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
         {demoMode && (

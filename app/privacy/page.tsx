@@ -13,7 +13,7 @@ export default function PrivacyPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500 floating-animation neon-glow" />
-              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockSentinel</span>
+              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockEvid 3.0</span>
             </Link>
             <Link href="/">
               <Button variant="outline" className="border-orange-500/30 text-[#f5f5f5] hover:bg-orange-500/20">
@@ -266,13 +266,13 @@ export default function PrivacyPage() {
                   <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
                   <div className="space-y-2">
                     <p>
-                      <strong className="text-[#f5f5f5]">Email:</strong> privacy@blocksentinel.com
+                      <strong className="text-[#f5f5f5]">Email:</strong> privacy@BlockEvid 3.0.com
                     </p>
                     <p>
                       <strong className="text-[#f5f5f5]">Address:</strong> 123 Blockchain Street, Tech City, TC 12345
                     </p>
                     <p>
-                      <strong className="text-[#f5f5f5]">Data Protection Officer:</strong> dpo@blocksentinel.com
+                      <strong className="text-[#f5f5f5]">Data Protection Officer:</strong> dpo@BlockEvid 3.0.com
                     </p>
                   </div>
                 </div>

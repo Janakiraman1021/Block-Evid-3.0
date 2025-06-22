@@ -25,7 +25,7 @@ export function MobileNav() {
           <div className="flex items-center justify-between pb-4 border-b border-orange-500/20">
             <Link href="/" className="flex items-center space-x-2" onClick={closeNav}>
               <Shield className="h-6 w-6 text-orange-500 neon-glow" />
-              <span className="text-xl font-bold gradient-text">BlockSentinel</span>
+              <span className="text-xl font-bold gradient-text">BlockEvid 3.0</span>
             </Link>
           </div>
 

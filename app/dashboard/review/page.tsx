@@ -194,7 +194,7 @@ export default function ReviewDashboard() {
         {/* Header */}
         <ScrollAnimation animation="fadeInUp">
           <div className="text-center">
-            <h1 className="text-4xl font-bold gradient-text mb-4">BlockSentinel Review Dashboard</h1>
+            <h1 className="text-4xl font-bold gradient-text mb-4">BlockEvid 3.0 Review Dashboard</h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Comprehensive overview of all implemented features, system metrics, and development progress
             </p>
@@ -209,7 +209,7 @@ export default function ReviewDashboard() {
                 <Star className="h-6 w-6 text-yellow-500" />
                 Development Progress
               </CardTitle>
-              <CardDescription>Overall completion status of BlockSentinel features</CardDescription>
+              <CardDescription>Overall completion status of BlockEvid 3.0 features</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -488,7 +488,7 @@ export default function ReviewDashboard() {
           <Card className="glass-effect">
             <CardHeader>
               <CardTitle>Quick Actions</CardTitle>
-              <CardDescription>Test different aspects of the BlockSentinel system</CardDescription>
+              <CardDescription>Test different aspects of the BlockEvid 3.0 system</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

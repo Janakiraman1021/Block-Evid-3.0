@@ -14,7 +14,7 @@ import { DashboardLayout } from "@/components/dashboard-layout"
 
 export default function AdminSettings() {
   const [systemSettings, setSystemSettings] = useState({
-    siteName: "BlockSentinel",
+    siteName: "BlockEvid 3.0",
     siteDescription: "Decentralized Crime Reporting Platform",
     maintenanceMode: false,
     registrationEnabled: true,
@@ -252,14 +252,14 @@ export default function AdminSettings() {
                   <div className="space-y-2">
                     <Label className="text-gray-300">Username</Label>
                     <Input
-                      placeholder="noreply@blocksentinel.com"
+                      placeholder="noreply@BlockEvid 3.0.com"
                       className="bg-black/50 border-orange-500/30 text-white"
                     />
                   </div>
 
                   <div className="space-y-2">
                     <Label className="text-gray-300">From Name</Label>
-                    <Input placeholder="BlockSentinel System" className="bg-black/50 border-orange-500/30 text-white" />
+                    <Input placeholder="BlockEvid 3.0 System" className="bg-black/50 border-orange-500/30 text-white" />
                   </div>
                 </div>
 

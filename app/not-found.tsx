@@ -12,7 +12,7 @@ export default function NotFound() {
         {/* Logo */}
         <div className="flex items-center justify-center space-x-3 mb-8">
           <Shield className="h-12 w-12 text-orange-400/80 floating-animation neon-glow" />
-          <span className="text-3xl font-bold gradient-text">BlockSentinel</span>
+          <span className="text-3xl font-bold gradient-text">BlockEvid 3.0</span>
         </div>
 
         {/* 404 Animation */}
@@ -88,7 +88,7 @@ export default function NotFound() {
 
         {/* Footer */}
         <div className="text-center text-gray-500 text-sm">
-          <p>© 2024 BlockSentinel. Secure • Transparent • Decentralized</p>
+          <p>© 2024 BlockEvid 3.0. Secure • Transparent • Decentralized</p>
         </div>
       </div>
     </div>

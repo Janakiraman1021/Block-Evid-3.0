@@ -44,7 +44,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
         const provider = new ethers.BrowserProvider(window.ethereum);
         const signer = await provider.getSigner();
-        const message = `Sign this message to authenticate with BlockSentinel: ${Date.now()}`;
+        const message = `Sign this message to authenticate with BlockEvid 3.0: ${Date.now()}`;
         const signature = await signer.signMessage(message);
         response = await fetch('http://localhost:5000/api/auth/wallet-login', {
           method: 'POST',

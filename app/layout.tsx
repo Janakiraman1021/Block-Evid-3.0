@@ -10,7 +10,7 @@ import { AuthProvider } from './context/AuthContext';
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "BlockSentinel - Secure Blockchain Incident Management",
+  title: "BlockEvid 3.0 - Secure Blockchain Incident Management",
   description: "Tamper-proof incident reporting and evidence handling system with blockchain security",
     generator: 'v0.dev'
 }

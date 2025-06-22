@@ -73,7 +73,7 @@ export default function LoginPage() {
 
   const handleQuickAccess = (role: string) => {
     localStorage.setItem("userRole", role)
-    localStorage.setItem("userEmail", `demo-${role}@blocksentinel.com`)
+    localStorage.setItem("userEmail", `demo-${role}@BlockEvid 3.0.com`)
     localStorage.setItem("isAuthenticated", "true")
     router.push(`/dashboard/${role}`)
   }
@@ -108,7 +108,7 @@ const handleWalletLogin = async () => {
     const wallet = accounts[0];
     setWalletAddress(wallet);
     const signer = await provider.getSigner();
-    const message = `Sign this message to authenticate with BlockSentinel: ${Date.now()}`;
+    const message = `Sign this message to authenticate with BlockEvid 3.0: ${Date.now()}`;
     const signature = await signer.signMessage(message);
     const response = await fetch("http://localhost:5000/api/auth/wallet-login", {
       method: "POST",
@@ -162,7 +162,7 @@ const handleWalletLogin = async () => {
           </div>
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Shield className="h-8 w-8 text-blue-600 dark:text-green-400 floating-animation" />
-            <span className="text-2xl font-bold gradient-text">BlockSentinel</span>
+            <span className="text-2xl font-bold gradient-text">BlockEvid 3.0</span>
           </div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Welcome Back</h1>
           <p className="text-gray-600 dark:text-gray-300">Sign in to access your secure dashboard</p>

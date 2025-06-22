@@ -458,7 +458,7 @@ export default function AuditSettings() {
                   <Textarea
                     placeholder="Enter email addresses separated by commas"
                     className="bg-black/50 border-orange-500/30 text-white"
-                    defaultValue="admin@blocksentinel.com, security@blocksentinel.com"
+                    defaultValue="admin@BlockEvid 3.0.com, security@BlockEvid 3.0.com"
                   />
                 </div>
 

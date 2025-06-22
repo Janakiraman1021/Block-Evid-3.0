@@ -81,7 +81,7 @@ export function RBACGuard({ children, requiredRole, requiredPermission, fallback
               <AlertTriangle className="h-5 w-5 text-yellow-600" />
               Unauthorized Wallet
             </CardTitle>
-            <CardDescription>Your wallet address is not authorized to access BlockSentinel</CardDescription>
+            <CardDescription>Your wallet address is not authorized to access BlockEvid 3.0</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="text-sm text-gray-600">

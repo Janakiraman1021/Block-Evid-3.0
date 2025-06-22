@@ -28,7 +28,7 @@ export default function FeaturesPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500 floating-animation neon-glow" />
-              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockSentinel</span>
+              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockEvid 3.0</span>
             </Link>
             <Link href="/">
               <Button variant="outline" className="border-orange-500/30 text-[#f5f5f5] hover:bg-orange-500/20">
@@ -48,7 +48,7 @@ export default function FeaturesPage() {
               Powerful Features for Secure Complaint Management
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-[#f5f5f5]/70 max-w-3xl mx-auto">
-              Discover how BlockSentinel revolutionizes complaint management with cutting-edge blockchain technology,
+              Discover how BlockEvid 3.0 revolutionizes complaint management with cutting-edge blockchain technology,
               ensuring transparency, security, and accountability.
             </p>
           </div>
@@ -284,7 +284,7 @@ export default function FeaturesPage() {
               Ready to Experience These Features?
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-[#f5f5f5]/70 mb-6 sm:mb-8">
-              Join thousands of users who trust BlockSentinel for secure complaint management.
+              Join thousands of users who trust BlockEvid 3.0 for secure complaint management.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link href="/auth/register" className="w-full sm:w-auto">

@@ -19,7 +19,7 @@ export default function LandingPage() {
               <ScrollAnimation animation="fadeInLeft">
                 <Link href="/" className="flex items-center space-x-3">
                   <FuturisticLogo size="lg" className="floating-animation" />
-                  <span className="text-lg sm:text-2xl font-bold gradient-text">BlockSentinel</span>
+                  <span className="text-lg sm:text-2xl font-bold gradient-text">BlockEvid 3.0</span>
                 </Link>
               </ScrollAnimation>
 
@@ -78,7 +78,7 @@ export default function LandingPage() {
               <ScrollAnimation animation="scaleIn">
                 <div className="flex items-center justify-center mb-6">
                   <FuturisticLogo size="xl" className="floating-animation mr-4" />
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text">BlockSentinel</h1>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text">BlockEvid 3.0</h1>
                 </div>
               </ScrollAnimation>
               <ScrollAnimation animation="fadeInUp" delay={200}>
@@ -251,7 +251,7 @@ export default function LandingPage() {
                 <div className="sm:col-span-2 lg:col-span-1">
                   <div className="flex items-center space-x-3 mb-3 sm:mb-4">
                     <FuturisticLogo size="md" className="neon-glow" />
-                    <span className="text-lg sm:text-xl font-bold gradient-text">BlockSentinel</span>
+                    <span className="text-lg sm:text-xl font-bold gradient-text">BlockEvid 3.0</span>
                   </div>
                   <p className="text-[#f5f5f5]/70 text-sm sm:text-base">
                     Quantum-secured, consciousness-driven, and dimensionally-enhanced incident management system.
@@ -331,7 +331,7 @@ export default function LandingPage() {
             </div>
             <ScrollAnimation animation="fadeInUp" delay={400}>
               <div className="border-t border-orange-500/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-[#f5f5f5]/70 text-sm sm:text-base">
-                <p>&copy; 2024 BlockSentinel. All dimensions reserved. Quantum-secured across realities.</p>
+                <p>&copy; 2024 BlockEvid 3.0. All dimensions reserved. Quantum-secured across realities.</p>
               </div>
             </ScrollAnimation>
           </div>

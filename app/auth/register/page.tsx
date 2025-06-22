@@ -79,7 +79,7 @@ export default function RegisterPage() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Shield className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">BlockSentinel</span>
+            <span className="text-2xl font-bold text-gray-900">BlockEvid 3.0</span>
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Create Account</h1>
           <p className="text-gray-600">Join the secure complaint management system</p>

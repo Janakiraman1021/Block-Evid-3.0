@@ -14,7 +14,7 @@ export default function AboutPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500 floating-animation neon-glow" />
-              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockSentinel</span>
+              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockEvid 3.0</span>
             </Link>
             <Link href="/">
               <Button variant="outline" className="border-orange-500/30 text-[#f5f5f5] hover:bg-orange-500/20">
@@ -31,7 +31,7 @@ export default function AboutPage() {
         <ScrollAnimation animation="fadeInUp">
           <div className="text-center mb-12 sm:mb-16">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-4 sm:mb-6">
-              About BlockSentinel
+              About BlockEvid 3.0
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-[#f5f5f5]/70 max-w-3xl mx-auto">
               Revolutionizing complaint management through blockchain technology, ensuring transparency, security, and
@@ -47,7 +47,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold gradient-text mb-4 sm:mb-6">Our Mission</h2>
                 <p className="text-sm sm:text-base text-[#f5f5f5]/70 mb-4 sm:mb-6 leading-relaxed">
-                  At BlockSentinel, we believe that every citizen deserves a transparent, secure, and efficient way to
+                  At BlockEvid 3.0, we believe that every citizen deserves a transparent, secure, and efficient way to
                   file complaints and track their resolution. Our mission is to bridge the gap between citizens and
                   authorities using cutting-edge blockchain technology.
                 </p>

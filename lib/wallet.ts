@@ -41,7 +41,7 @@ export const mockRoles: Record<string, UserRole> = {
     address: "0x1234567890123456789012345678901234567890",
     role: "admin",
     name: "Admin Wilson",
-    email: "admin@blocksentinel.com",
+    email: "admin@BlockEvid 3.0.com",
   },
   // Common MetaMask test addresses
   "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266": {
@@ -61,7 +61,7 @@ export const mockRoles: Record<string, UserRole> = {
     address: "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
     role: "admin",
     name: "Test Admin",
-    email: "testadmin@blocksentinel.com",
+    email: "testadmin@BlockEvid 3.0.com",
   },
 }
 
@@ -81,7 +81,7 @@ export const getUserRole = (address: string): UserRole | null => {
       address,
       role: "admin",
       name: "Demo Admin",
-      email: "demo.admin@blocksentinel.com",
+      email: "demo.admin@BlockEvid 3.0.com",
     }
   }
 

@@ -54,7 +54,7 @@ export default function ContactPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500 floating-animation neon-glow" />
-              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockSentinel</span>
+              <span className="text-lg sm:text-2xl font-bold gradient-text">BlockEvid 3.0</span>
             </Link>
             <Link href="/">
               <Button variant="outline" className="border-orange-500/30 text-[#f5f5f5] hover:bg-orange-500/20">
@@ -224,8 +224,8 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-orange-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-[#f5f5f5] text-sm sm:text-base">Email</h4>
-                      <p className="text-xs sm:text-sm text-[#f5f5f5]/60">support@blocksentinel.com</p>
-                      <p className="text-xs sm:text-sm text-[#f5f5f5]/60">legal@blocksentinel.com</p>
+                      <p className="text-xs sm:text-sm text-[#f5f5f5]/60">support@BlockEvid 3.0.com</p>
+                      <p className="text-xs sm:text-sm text-[#f5f5f5]/60">legal@BlockEvid 3.0.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

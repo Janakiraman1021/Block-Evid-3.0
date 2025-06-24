@@ -58,7 +58,7 @@ export default function AdminDashboard() {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null
       if (!token) return
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         })
         if (res.ok) {
@@ -71,9 +71,9 @@ export default function AdminDashboard() {
       // Fetch all users, police, and admins
       try {
         const [usersRes, policeRes, adminsRes] = await Promise.all([
-          fetch("http://localhost:5000/api/auth/users", { headers: { Authorization: `Bearer ${token}` } }),
-          fetch("http://localhost:5000/api/auth/police", { headers: { Authorization: `Bearer ${token}` } }),
-          fetch("http://localhost:5000/api/auth/admins", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("https://blockevid3-0-bc.onrender.com/api/auth/users", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("https://blockevid3-0-bc.onrender.com/api/auth/police", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("https://blockevid3-0-bc.onrender.com/api/auth/admins", { headers: { Authorization: `Bearer ${token}` } }),
         ])
         let usersData = usersRes.ok ? await usersRes.json() : []
         let policeData = policeRes.ok ? await policeRes.json() : []
@@ -108,7 +108,7 @@ export default function AdminDashboard() {
       }
       // Fetch all complaints for admin
       try {
-        const complaintsRes = await fetch("http://localhost:5000/api/complaints/admin-view-comp", {
+        const complaintsRes = await fetch("https://blockevid3-0-bc.onrender.com/api/complaints/admin-view-comp", {
           headers: { Authorization: `Bearer ${token}` },
         })
         if (complaintsRes.ok) {

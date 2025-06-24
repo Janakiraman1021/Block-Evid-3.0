@@ -29,7 +29,7 @@ export default function PoliceDashboard() {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
       if (!token) return;
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {
@@ -42,57 +42,36 @@ export default function PoliceDashboard() {
     };
     fetchUser();
 
-    // Mock data - Police can see ALL complaints, not just their own
-    setComplaints([
-      {
-        id: "CMP-001",
-        title: "Noise Pollution in Residential Area",
-        description: "Excessive noise from construction site during night hours",
-        status: "pending",
-        type: "Environmental",
-        date: "2024-01-15",
-        location: "Sector 15, Gurgaon",
-      },
-      {
-        id: "CMP-002",
-        title: "Road Safety Concern",
-        description: "Broken streetlight causing accidents",
-        status: "verified",
-        type: "Infrastructure",
-        date: "2024-01-10",
-        location: "MG Road, Delhi",
-        level: "local",
-      },
-      {
-        id: "CMP-003",
-        title: "Water Quality Issue",
-        description: "Contaminated water supply in the area",
-        status: "evidence_added",
-        type: "Public Health",
-        date: "2024-01-20",
-        location: "Block A, Noida",
-        level: "district",
-      },
-      {
-        id: "CMP-004",
-        title: "Traffic Signal Malfunction",
-        description: "Traffic lights not working properly causing congestion",
-        status: "pending",
-        type: "Infrastructure",
-        date: "2024-01-18",
-        location: "Central Avenue, Mumbai",
-      },
-      {
-        id: "CMP-005",
-        title: "Illegal Dumping",
-        description: "Industrial waste being dumped in residential area",
-        status: "verified",
-        type: "Environmental",
-        date: "2024-01-12",
-        location: "Industrial Area, Pune",
-        level: "state",
-      },
-    ])
+    // Fetch all complaints for police
+    const fetchComplaints = async () => {
+      const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+      if (!token) return;
+      try {
+        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/complaints/admin-view-comp", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        if (res.ok) {
+          let data = await res.json();
+          if (!Array.isArray(data)) data = Object.values(data);
+          if (Array.isArray(data) && Array.isArray(data[0])) data = data.flat();
+          setComplaints(
+            data.map((c: any) => ({
+              id: c._id || c.id || c.complaintId || "",
+              title: c.title || c.subject || "",
+              description: c.description || "",
+              status: (c.status || "pending").toLowerCase().replace(/\s/g, "_"),
+              type: c.type || c.category || "",
+              date: c.date || (c.createdAt ? new Date(c.createdAt).toISOString().slice(0, 10) : ""),
+              location: c.location || "",
+              level: c.level || undefined,
+            }))
+          );
+        }
+      } catch (err) {
+        // handle error
+      }
+    };
+    fetchComplaints();
   }, [])
 
   const handleVerify = (complaintId: string) => {

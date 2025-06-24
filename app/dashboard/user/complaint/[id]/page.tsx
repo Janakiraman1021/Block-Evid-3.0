@@ -23,7 +23,7 @@ export default function ComplaintDetailPage() {
       try {
         const token = localStorage.getItem("token")
         const id = params.id as string
-        const res = await fetch(`http://localhost:5000/api/complaints/${id}`, {
+        const res = await fetch(`https://blockevid3-0-bc.onrender.com/api/complaints/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

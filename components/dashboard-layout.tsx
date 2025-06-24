@@ -40,7 +40,7 @@ export function DashboardLayout({ children, role }: DashboardLayoutProps) {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null
       if (!token) return
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         })
         if (res.ok) {
@@ -372,7 +372,7 @@ function AssignOfficerShortcut() {
     setResult(null)
     try {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null
-      const res = await fetch("http://localhost:5000/api/complaints/assign-officer", {
+      const res = await fetch("https://blockevid3-0-bc.onrender.com/api/complaints/assign-officer", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

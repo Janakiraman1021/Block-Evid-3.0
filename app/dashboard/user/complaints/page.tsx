@@ -38,7 +38,7 @@ export default function MyComplaintsPage() {
           return
         }
         // Fetch all complaints for this user from the correct endpoint
-        const res = await fetch(`http://localhost:5000/api/complaints/my-complaints/${userId}`, {
+        const res = await fetch(`https://blockevid3-0-bc.onrender.com/api/complaints/my-complaints/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

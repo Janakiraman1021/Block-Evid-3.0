@@ -32,7 +32,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       let response;
       if (password) {
         // Email/password login
-        response = await fetch('http://localhost:5000/api/auth/login', {
+        response = await fetch('https://blockevid3-0-bc.onrender.com/api/auth/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: identifier, password }),
@@ -46,7 +46,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const signer = await provider.getSigner();
         const message = `Sign this message to authenticate with BlockEvid 3.0: ${Date.now()}`;
         const signature = await signer.signMessage(message);
-        response = await fetch('http://localhost:5000/api/auth/wallet-login', {
+        response = await fetch('https://blockevid3-0-bc.onrender.com/api/auth/wallet-login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ wallet: identifier, message, signature }),
@@ -75,7 +75,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const register = async (name: string, walletAddress: string, role?: string) => {
-    const response = await fetch('http://localhost:5000/api/auth/register', {
+    const response = await fetch('https://blockevid3-0-bc.onrender.com/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, walletAddress, role }),

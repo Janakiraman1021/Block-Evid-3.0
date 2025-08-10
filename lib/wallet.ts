@@ -105,16 +105,28 @@ export const getUserRole = (address: string): UserRole | null => {
   }
 }
 
-export const hasPermission = (userRole: string, action: string): boolean => {
-  const permissions = {
-    user: [
+export interface AccessLevel {
+  name: "basic" | "intermediate" | "advanced" | "full"
+  description: string
+  permissions: string[]
+}
+
+export const accessLevels: Record<string, AccessLevel> = {
+  basic: {
+    name: "basic",
+    description: "Basic access with limited permissions",
+    permissions: [
       "view_own_complaints",
       "register_complaint",
       "view_own_evidence",
       "view_blockchain_hashes",
       "connect_wallet",
-    ],
-    police: [
+    ]
+  },
+  intermediate: {
+    name: "intermediate",
+    description: "Intermediate access with enhanced capabilities",
+    permissions: [
       "view_all_complaints",
       "upload_evidence",
       "view_evidence",
@@ -123,8 +135,27 @@ export const hasPermission = (userRole: string, action: string): boolean => {
       "update_complaint_status",
       "view_blockchain_hashes",
       "connect_wallet",
-    ],
-    admin: [
+    ]
+  },
+  advanced: {
+    name: "advanced",
+    description: "Advanced access with administrative capabilities",
+    permissions: [
+      "view_own_complaints",
+      "view_all_complaints",
+      "view_evidence",
+      "update_complaint_status",
+      "promote_users",
+      "view_audit_logs",
+      "view_blockchain_hashes",
+      "access_admin_panel",
+      "connect_wallet",
+    ]
+  },
+  full: {
+    name: "full",
+    description: "Full access with all system permissions",
+    permissions: [
       "view_own_complaints",
       "view_all_complaints",
       "view_evidence",
@@ -136,8 +167,36 @@ export const hasPermission = (userRole: string, action: string): boolean => {
       "manage_roles",
       "flag_complaints",
       "connect_wallet",
-    ],
+      "manage_permissions",
+      "view_avalanche_transactions",
+      "system_configuration",
+      "audit_settings",
+    ]
+  }
+}
+
+export const hasPermission = (userRole: string, action: string): boolean => {
+  const permissions = {
+    user: accessLevels.basic.permissions,
+    police: accessLevels.intermediate.permissions,
+    admin: accessLevels.full.permissions,
   }
 
   return permissions[userRole as keyof typeof permissions]?.includes(action) || false
+}
+
+export const getPermissionsByAccessLevel = (level: string): string[] => {
+  return accessLevels[level]?.permissions || []
+}
+
+export const getAllAvailablePermissions = (): string[] => {
+  const allPermissions = new Set<string>()
+  
+  Object.values(accessLevels).forEach(level => {
+    level.permissions.forEach(permission => {
+      allPermissions.add(permission)
+    })
+  })
+  
+  return Array.from(allPermissions)
 }

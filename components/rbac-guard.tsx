@@ -30,12 +30,26 @@ export function RBACGuard({ children, requiredRole, requiredPermission, fallback
       if (role) {
         let access = true
 
+        // Check role-based access
         if (requiredRole && role.role !== requiredRole) {
-          access = false
+          // Special case: admins can access everything
+          if (role.role === 'admin' && role.accessLevel === 'full') {
+            access = true;
+          } else {
+            access = false;
+          }
         }
 
-        if (requiredPermission && !hasPermission(role.role, requiredPermission)) {
-          access = false
+        // Check permission-based access
+        if (requiredPermission && access) {
+          // First check user's explicit permissions if available
+          if (role.permissions && Array.isArray(role.permissions)) {
+            access = role.permissions.includes(requiredPermission);
+          } 
+          // Fall back to role-based permissions if no explicit permissions
+          else if (!hasPermission(role.role, requiredPermission)) {
+            access = false;
+          }
         }
 
         setHasAccess(access)

@@ -196,7 +196,7 @@ BlockEvid 3.0 leverages Avalanche's powerful blockchain infrastructure to enhanc
 
 * **Avalanche Wallet Integration**: Native support for Avalanche wallets alongside traditional Web3 wallets.
 
-* **ARC-20 Tokens**: Implementation of access tokens following the ARC-20 standard for role-based permissions.
+* **ERC-20 Tokens**: Implementation of access tokens following the ARC-20 standard for role-based permissions.
 
 * **Avalanche Network Parameters**: Optimized gas settings for Avalanche's unique consensus mechanism.
 

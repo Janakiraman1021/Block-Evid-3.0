@@ -41,9 +41,9 @@ export default function UserManagementSystem() {
       if (!token) return
       try {
         const [usersRes, policeRes, adminsRes] = await Promise.all([
-          fetch("https://blockevid3-0-bc.onrender.com/api/auth/users", { headers: { Authorization: `Bearer ${token}` } }),
-          fetch("https://blockevid3-0-bc.onrender.com/api/auth/police", { headers: { Authorization: `Bearer ${token}` } }),
-          fetch("https://blockevid3-0-bc.onrender.com/api/auth/admins", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("http://localhost:5000/api/auth/users", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("http://localhost:5000/api/auth/police", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("http://localhost:5000/api/auth/admins", { headers: { Authorization: `Bearer ${token}` } }),
         ])
         let usersData = usersRes.ok ? await usersRes.json() : []
         let policeData = policeRes.ok ? await policeRes.json() : []

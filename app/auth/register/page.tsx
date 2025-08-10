@@ -45,7 +45,7 @@ export default function RegisterPage() {
 
     try {
       // 1. Register the user
-      const registerRes = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/register", {
+      const registerRes = await fetch("http://localhost:5000/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

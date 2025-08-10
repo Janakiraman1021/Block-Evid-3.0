@@ -19,9 +19,68 @@ interface Complaint {
   level?: "local" | "district" | "state" | "national"
 }
 
+const SAMPLE_USER = {
+  name: "Inspector Rajesh Kumar",
+  email: "rajesh.kumar@police.gov",
+  role: "police",
+}
+
+const SAMPLE_COMPLAINTS: Complaint[] = [
+  {
+    id: "CMP001",
+    title: "Theft at Market",
+    description: "Reported theft at the central market. Suspect fled the scene.",
+    status: "pending",
+    type: "Theft",
+    date: "2024-06-01",
+    location: "Central Market",
+    level: "local",
+  },
+  {
+    id: "CMP002",
+    title: "Assault Case",
+    description: "Physical altercation reported near the bus stand.",
+    status: "verified",
+    type: "Assault",
+    date: "2024-06-02",
+    location: "Bus Stand",
+    level: "district",
+  },
+  {
+    id: "CMP003",
+    title: "Missing Person",
+    description: "Complaint about a missing person from the residential area.",
+    status: "evidence_added",
+    type: "Missing Person",
+    date: "2024-06-03",
+    location: "Sector 12",
+    level: "state",
+  },
+  {
+    id: "CMP004",
+    title: "Cyber Fraud",
+    description: "Online banking fraud reported by a local resident.",
+    status: "fir_attached",
+    type: "Cyber Crime",
+    date: "2024-06-04",
+    location: "Online",
+    level: "national",
+  },
+  {
+    id: "CMP005",
+    title: "Noise Complaint",
+    description: "Loud noise reported from a party late at night.",
+    status: "rejected",
+    type: "Public Disturbance",
+    date: "2024-06-05",
+    location: "Sector 8",
+    level: "local",
+  },
+]
+
 export default function PoliceDashboard() {
-  const [user, setUser] = useState(null)
-  const [complaints, setComplaints] = useState<Complaint[]>([])
+  const [user, setUser] = useState<any>(SAMPLE_USER)
+  const [complaints, setComplaints] = useState<Complaint[]>(SAMPLE_COMPLAINTS)
 
   useEffect(() => {
     // Fetch user details from backend
@@ -29,7 +88,7 @@ export default function PoliceDashboard() {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
       if (!token) return;
       try {
-        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/me", {
+        const res = await fetch("http://localhost:5000/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {
@@ -47,7 +106,7 @@ export default function PoliceDashboard() {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
       if (!token) return;
       try {
-        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/complaints/admin-view-comp", {
+        const res = await fetch("http://localhost:5000/api/complaints/assigned", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {
@@ -56,7 +115,7 @@ export default function PoliceDashboard() {
           if (Array.isArray(data) && Array.isArray(data[0])) data = data.flat();
           setComplaints(
             data.map((c: any) => ({
-              id: c._id || c.id || c.complaintId || "",
+              id: c.complaintId || c._id || c.id || "",
               title: c.title || c.subject || "",
               description: c.description || "",
               status: (c.status || "pending").toLowerCase().replace(/\s/g, "_"),

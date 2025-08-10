@@ -41,7 +41,7 @@ export default function UserProfilePage() {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
       if (!token) return;
       try {
-        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/me", {
+        const res = await fetch("http://localhost:5000/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {

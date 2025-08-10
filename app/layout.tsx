@@ -26,7 +26,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <WalletProvider>
             <AuthProvider>
-              <FuturisticCursor />
+              {/* <FuturisticCursor /> */}
               {children}
             </AuthProvider>
           </WalletProvider>

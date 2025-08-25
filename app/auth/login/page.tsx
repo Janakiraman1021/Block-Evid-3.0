@@ -33,7 +33,7 @@ export default function LoginPage() {
     setIsLoading(true);
     setError("");
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -110,7 +110,7 @@ const handleWalletLogin = async () => {
     const signer = await provider.getSigner();
     const message = `Sign this message to authenticate with BlockEvid 3.0: ${Date.now()}`;
     const signature = await signer.signMessage(message);
-    const response = await fetch("http://localhost:5000/api/auth/wallet-login", {
+    const response = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/wallet-login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

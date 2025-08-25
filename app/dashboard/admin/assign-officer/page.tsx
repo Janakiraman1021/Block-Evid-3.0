@@ -28,7 +28,7 @@ export default function AssignOfficerPage() {
       setError("")
       try {
         const token = localStorage.getItem("token")
-        const res = await fetch("http://localhost:5000/api/complaints/admin-view-comp", {
+        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/complaints/admin-view-comp", {
           headers: { Authorization: `Bearer ${token}` },
         })
         if (!res.ok) throw new Error("Failed to fetch complaints")
@@ -44,7 +44,7 @@ export default function AssignOfficerPage() {
     const fetchOfficers = async () => {
       try {
         const token = localStorage.getItem("token")
-        const res = await fetch("http://localhost:5000/api/auth/police", {
+        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/police", {
           headers: { Authorization: `Bearer ${token}` },
         })
         if (!res.ok) throw new Error("Failed to fetch officers")
@@ -70,7 +70,7 @@ export default function AssignOfficerPage() {
     console.log("Assigning officer:", { complaintId: realComplaintId, policeId: selectedOfficer[complaintId] })
     try {
       const token = localStorage.getItem("token")
-      const endpoint = `http://localhost:5000/api/complaints/assign/${realComplaintId}`
+      const endpoint = `https://blockevid3-0-bc.onrender.com/api/complaints/assign/${realComplaintId}`
       console.log("API endpoint:", endpoint)
       const body = { complaintId: realComplaintId, policeId: selectedOfficer[complaintId] }
       console.log("Request body:", body)

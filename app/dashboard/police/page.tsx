@@ -88,7 +88,7 @@ export default function PoliceDashboard() {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
       if (!token) return;
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {
@@ -106,7 +106,7 @@ export default function PoliceDashboard() {
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
       if (!token) return;
       try {
-        const res = await fetch("http://localhost:5000/api/complaints/assigned", {
+        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/complaints/assigned", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {

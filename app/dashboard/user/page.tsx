@@ -43,7 +43,7 @@ export default function UserDashboard() {
         return;
       }
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://blockevid3-0-bc.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {
@@ -52,7 +52,7 @@ export default function UserDashboard() {
           // Now fetch complaints for this user
           const userId = data._id || data.id || data.userId; // support various backend keys
           if (userId) {
-            const complaintsRes = await fetch(`http://localhost:5000/api/complaints/my-complaints/${userId}`, {
+            const complaintsRes = await fetch(`https://blockevid3-0-bc.onrender.com/api/complaints/my-complaints/${userId}`, {
               headers: { Authorization: `Bearer ${token}` },
             });
             if (complaintsRes.ok) {

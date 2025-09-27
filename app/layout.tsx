@@ -4,7 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { WalletProvider } from "@/components/wallet-provider"
-import FuturisticCursor from "@/components/futuristic-cursor"
+// import FuturisticCursor from "@/components/futuristic-cursor"
 import { AuthProvider } from './context/AuthContext';
 
 const inter = Inter({ subsets: ["latin"] })

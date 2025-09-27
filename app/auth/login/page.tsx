@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Shield, Wallet, Mail, Lock, Eye, Users, Activity } from "lucide-react"
+import { Shield, Wallet, Mail, Lock, Eye, EyeOff, Users, Activity } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { WalletConnect } from "@/components/wallet-connect"
@@ -23,9 +23,9 @@ export default function LoginPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const router = useRouter()
   const [walletAddress, setWalletAddress] = useState('');
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false)
   // const { login } = useAuth();
 
   const handleEmailLogin = async (e: React.FormEvent) => {
@@ -202,14 +202,25 @@ const handleWalletLogin = async () => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="password">Password</Label>
-                    <Input
-                      id="password"
-                      type="password"
-                      placeholder="Enter any password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
+                    <div className="relative">
+                      <Input
+                        id="password"
+                        type={showPassword ? "text" : "password"}
+                        placeholder="Enter any password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        className="pr-10"
+                      />
+                      <button
+                        type="button"
+                        aria-label={showPassword ? "Hide password" : "Show password"}
+                        onClick={() => setShowPassword(v => !v)}
+                        className="absolute inset-y-0 right-2 flex items-center text-gray-500 hover:text-gray-700"
+                      >
+                        {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      </button>
+                    </div>
                   </div>
                   <Button
                     type="submit"
